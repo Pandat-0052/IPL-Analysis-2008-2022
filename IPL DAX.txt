@@ -1,0 +1,60 @@
+1- Total Runs = SUM(ipl_ball_by_ball_2008_2022[total_run])
+2- Total Wickets = CALCULATE(COUNTROWS(ipl_ball_by_ball_2008_2022),ipl_ball_by_ball_2008_2022[iswicket_delivery]=1)
+3- Total 4's = CALCULATE(COUNT(ipl_ball_by_ball_2008_2022[total_run]),ipl_ball_by_ball_2008_2022[total_run]=4 ||                 ipl_ball_by_ball_2008_2022[total_run]=5)
+4- Total 6' = CALCULATE(COUNTROWS(ipl_ball_by_ball_2008_2022),ipl_ball_by_ball_2008_2022[total_run]=6 || ipl_ball_by_ball_2008_2022               [total_run]=7)
+5- Wining Team = CALCULATE(
+    VALUES(ipl_matches_2008_2022[winning_team]),
+    FILTER(ipl_matches_2008_2022,ipl_matches_2008_2022[match_number]="Final" && ipl_matches_2008_2022[season]= MAX(ipl_matches_2008_2022    [season])))
+
+6- Conc. Run = CONCATENATE(SUM(ipl_ball_by_ball_2008_2022[batsman_run]), " Runs")
+7- Conc. Wickets = CONCATENATE(SUM(ipl_ball_by_ball_2008_2022[iswicket_delivery])," Wickets")
+8- Strike rate = (SUM(ipl_ball_by_ball_2008_2022[total_run])/COUNT(ipl_ball_by_ball_2008_2022[ball_number]))*100
+9- Economy = DIVIDE(
+               SUMX(
+                FILTER(ipl_ball_by_ball_2008_2022,ipl_ball_by_ball_2008_2022[extra_type]<>"legbyes" && ipl_ball_by_ball_2008_2022[extra_type]<>"byes"),ipl_ball_by_ball_2008_2022[total_run]),COUNT(ipl_ball_by_ball_2008_2022[overs])/6
+                )
+
+
+10=  Won BY = 
+    CALCULATE(
+        VALUES(ipl_matches_2008_2022[margin]),
+        FILTER(
+            ipl_matches_2008_2022,
+            ipl_matches_2008_2022[match_number] = "Final" &&
+            ipl_matches_2008_2022[season] = MAX(ipl_matches_2008_2022[season])
+        )
+    ) & 
+    " " & 
+    CALCULATE(
+        VALUES(ipl_matches_2008_2022[won_by]),
+        FILTER(
+            ipl_matches_2008_2022,
+            ipl_matches_2008_2022[match_number] = "Final" &&
+            ipl_matches_2008_2022[season] = MAX(ipl_matches_2008_2022[season])
+        )
+    )
+
+11 Match played = SUMX(VALUES(ipl_ball_by_ball_2008_2022[batter]),CALCULATE(DISTINCTCOUNT(ipl_ball_by_ball_2008_2022[id])))
+12=Avg. by Bowler = DIVIDE(
+               SUMX(
+                FILTER(ipl_ball_by_ball_2008_2022,ipl_ball_by_ball_2008_2022[extra_type]<>"legbyes" && ipl_ball_by_ball_2008_2022[extra_type]<>"byes"),ipl_ball_by_ball_2008_2022[total_run]),SUM(ipl_ball_by_ball_2008_2022[iswicket_delivery])
+                )
+
+13= Man of the match = CALCULATE(
+    VALUES(ipl_matches_2008_2022[player_of_match]),
+    FILTER(ipl_matches_2008_2022,ipl_matches_2008_2022[match_number]="Final" && ipl_matches_2008_2022[season]= MAX(ipl_matches_2008_2022[season])))
+
+14= Match played Baller = SUMX(VALUES(ipl_ball_by_ball_2008_2022[bowler]),CALCULATE(DISTINCTCOUNT(ipl_ball_by_ball_2008_2022[id])))
+
+15=toss win count = CALCULATE(COUNTROWS(ipl_matches_2008_2022),ipl_matches_2008_2022[toss_winner]=ipl_matches_2008_2022[winning_team])
+
+
+
+
+
+
+
+
+	
+
+
