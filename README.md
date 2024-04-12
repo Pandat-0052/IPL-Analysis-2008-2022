@@ -1,5 +1,11 @@
 #  <p align ="center"> IPL Data Analysis Dashboard
 
+# <p align ="center">![Pic](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/Dashboard.JPG)</p>
+# <p align ="center">![Pic](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/Ipl%201.JPG)</p>
+# <p align ="center">![Pic](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/Ipl%202.JPG)</p>
+# <p align ="center">![Pic](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/Ipl%203.JPG)</p>
+# <p align ="center">![Pic](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/Ipl%204.JPG)</p>
+
 🏏 Excited to share my latest project: A comprehensive IPL Data Analysis Dashboard covering matches from 2008 to 2022! 📊
 
 I've compiled extensive data on IPL matches and created insightful visualizations to uncover key trends and performances.
@@ -21,18 +27,16 @@ I've compiled extensive data on IPL matches and created insightful visualization
 
 ## Project Structure:
 
-- `data/`: Raw and processed data files
-- `notebooks/`: Jupyter notebooks for data cleaning, analysis, and visualization
-- `visualizations/`: Output visualizations generated from the analysis
-- `reports/`: Summary reports and documentation
-- `scripts/`: Scripts for data preprocessing or automation tasks
+- [`data 1`](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/ipl_ball_by_ball_2008_2022.csv): IPL Raw  data ball to ball files
+- [`data 2`](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/ipl_matches_2008_2022.csv) IPL Raw  data match files
+- [`file`](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/IPL%202022.pbix):  Power BI file containing the dashboard design and data connections, data cleaning, analysis, and visualization
+- [`file`](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/IPL%20DAX.txt): DAX used for visualization.
+-  [`read.me`](https://github.com/Pandat-0052/IPL-Analysis-2008-2022/blob/main/README.md): Project overview and instructions.
 
 ## Technologies Used:
 
-- **Data Analysis:** Python, Pandas, NumPy
-- **Data Visualization:** Matplotlib, Seaborn, Plotly
-- **Dashboard Creation:** Power BI, Tableau
-- **Version Control:** Git, GitHub
+- **Dashboard Creation:** Power BI
+- **Version Control:**  GitHub
 
 🚀 This project represents my passion for data analysis and my commitment to delivering actionable insights. I'm thrilled to share it with you.
 
